@@ -18,13 +18,19 @@ def any_sum(numbers: list[int], k: int) -> bool:
     for num in numbers:
         complement = k - num
         if complement in complements:
-            print(f"complement found in set: {complement}, current value: {num}")
+            print(f"{num} + {complement} = {k}")
             return True
         else:
             complements.add(num)
 
+    print("no valid pairs")
     return False
 
-print(k)
-print(numbers)
-print(any_sum(numbers, k))
+print(f"k: {k}")
+print(f"numbers: {numbers}")
+any_sum(numbers, k)
+
+""" main concepts touched or learned:
+    complements are powerful for sum related operations
+    checking for existence in a set is faster than comparing elements
+    string formatting, some random usage """
