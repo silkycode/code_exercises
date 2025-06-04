@@ -6,12 +6,18 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 Follow-up: what if you can't use division? """
 
+import math
+
 numbers = [1, 2, 3, 4, 5]
 
 def list_product(nums: list[int]) -> list[int]:
-    
 
+    products = []
+    product = math.prod(nums)
 
+    for num in nums:
+        products.append(product // num)
 
+    return products
 
-    return []  
+print(list_product(numbers))
