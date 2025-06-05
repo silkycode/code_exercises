@@ -1,10 +1,12 @@
-""" This problem was recently asked by Google.
+""" 
+This problem was recently asked by Google.
 
 Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
 
 For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
-Bonus: Can you do this in one pass? """
+Bonus: Can you do this in one pass? 
+"""
 
 import random
 
@@ -30,7 +32,9 @@ print(f"k: {k}")
 print(f"numbers: {numbers}")
 any_sum(numbers, k)
 
-""" main concepts touched or learned:
+""" 
+main concepts touched or learned:
     complements are powerful for sum related operations
     checking for existence in a set is faster than comparing elements
-    string formatting, some random usage """
+    string formatting, some random usage 
+"""
