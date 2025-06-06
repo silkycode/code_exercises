@@ -27,3 +27,5 @@ print(list_product(numbers))
 """
 to solve without division, use a suffix and prefix pass to pre-calculate products stored in separate arrays 
 """
+
+# DONE
