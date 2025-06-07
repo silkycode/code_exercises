@@ -33,10 +33,9 @@ print(f"numbers: {numbers}")
 any_sum(numbers, k)
 
 """ 
-main concepts touched or learned:
-    complements are powerful for sum related operations
-    checking for existence in a set is faster than comparing elements
-    string formatting, some random usage 
+complements are powerful for sum related operations
+checking for existence in a set is faster than comparing elements
+string formatting, some random usage 
 """
 
 # DONE

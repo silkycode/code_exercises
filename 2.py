@@ -12,7 +12,7 @@ import math
 
 numbers = [1, 2, 3, 4, 5]
 
-def list_product(nums: list[int]) -> list[int]:
+def list_product_naive(nums: list[int]) -> list[int]:
 
     products = []
     product = math.prod(nums)
@@ -22,7 +22,7 @@ def list_product(nums: list[int]) -> list[int]:
 
     return products
 
-print(list_product(numbers))
+print(list_product_naive(numbers))
 
 """
 to solve without division, use a suffix and prefix pass to pre-calculate products stored in separate arrays 
