@@ -17,7 +17,7 @@ def cons(a, b):
         return f(a, b)
     return pair
 
-# uses the remembered info from its input function's context as arguments for an internal function that returns 
+# uses the remembered info from input function's context as arguments for an internal function that returns the pair element
 def car(f):
     def first(a, b):
         return a
@@ -28,7 +28,12 @@ def cdr(f):
         return b
     return f(second)
 
-print(car(cons(3, 4)))
-print(cdr(cons(3, 4)))
+# return pair(f) with (a, b) in context
+pair_function = cons(3, 4) 
 
+# car and cdr take this pair function with context of (a, b) to pass internally
+print(car(pair_function))
+print(cdr(pair_function))
+
+# could use lambdas (?)
 # closures, need to do more research but DONE
