@@ -11,17 +11,24 @@ def cons(a, b):
 
 Implement car and cdr. """
 
+# returns a reference to a function that takes another function as an argument
 def cons(a, b):
-
     def pair(f):
         return f(a, b)
-    
     return pair
 
+# uses the remembered info from its input function's context as arguments for an internal function that returns 
 def car(f):
-    return
+    def first(a, b):
+        return a
+    return f(first)
 
 def cdr(f):
-    return
+    def second(a, b):
+        return b
+    return f(second)
 
-print(cons(2, 4))
+print(car(cons(3, 4)))
+print(cdr(cons(3, 4)))
+
+# closures, need to do more research but DONE
