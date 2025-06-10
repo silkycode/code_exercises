@@ -126,6 +126,8 @@ class Sudoku():
             for j in range(9):
                 self.board[i][j] = 0
 
+    def solve(self) -> None:
+        return
 
 sudoku = Sudoku()
 sudoku.easy_preset()
