@@ -4,15 +4,16 @@ Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with digits
 
 Implement an efficient sudoku solver. """
 
-class SudokuGrid():
+WIDTH = 9
+
+class Sudoku():
     def __init__(self) -> None:
 
-        self.width = 9
-        self.rows = [set() for _ in range(self.width)]
-        self.cols = [set() for _ in range(self.width)]
-        self.boxes = [set() for _ in range(self.width)]
+        self.rows = [set() for _ in range(WIDTH)]
+        self.cols = [set() for _ in range(WIDTH)]
+        self.boxes = [set() for _ in range(WIDTH)]
 
-        self.board = [[0] * 9 for i in range(9)]
+        self.board = [[0] * WIDTH for i in range(WIDTH)]
         self.valid_state = True
 
     def insert(self, i: int, j: int, val: int) -> bool:
@@ -54,7 +55,7 @@ class SudokuGrid():
         self.board[i][j] = 0
 
     def get_sets(self, i: int, j: int) -> tuple:
-        box_width = int(self.width ** 0.5)
+        box_width = int(WIDTH ** 0.5)
         box_id = (i // box_width) * box_width + (j // box_width)
 
         return (self.rows[i], self.cols[j], self.boxes[box_id])
@@ -116,7 +117,6 @@ class SudokuGrid():
         sudoku.insert(8, 8, 9)
 
     def reset_board(self) -> None:
-
         for i in range(9):
             self.rows[i].clear()
             self.cols[i].clear()
@@ -127,6 +127,6 @@ class SudokuGrid():
                 self.board[i][j] = 0
 
 
-sudoku = SudokuGrid()
+sudoku = Sudoku()
 sudoku.easy_preset()
 sudoku.visualize()
